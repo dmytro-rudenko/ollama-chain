@@ -1,17 +1,9 @@
 {
   "name": "ollama-chain",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "description": "",
-  "dependencies": {
-    "ollama": "^0.5.15",
-    "ollama-chain": "^1.0.1"
   },
   "keywords": [
     "ollama",
@@ -20,5 +12,12 @@
     "language model",
     "javascript",
     "nodejs"
-  ]
+  ],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "ollama": "^0.5.15",
+    "ollama-chain": "^1.0.1"
+  }
 }
