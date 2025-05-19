@@ -1,6 +1,6 @@
 # ollama-chain
 
-A TypeScript/JavaScript library for building composable, chainable, and transactional chat flows with [Ollama](https://ollama.com/) models. ollama-chain provides a fluent API to construct, manage, and execute chat conversations, including streaming and transaction support.
+A TypeScript/JavaScript library for building composable, chainable, and transactional chat flows with [Ollama](https://ollama.com/) models. ollama-chain provides a fluent API to construct, manage, and execute chat conversations, including streaming and transaction support. Based on [Ollama Javascript Library](https://www.npmjs.com/package/ollama)
 
 ## Features
 
