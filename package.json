@@ -10,6 +10,7 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
-    "ollama": "^0.5.15"
+    "ollama": "^0.5.15",
+    "ollama-chain": "^1.0.1"
   }
 }

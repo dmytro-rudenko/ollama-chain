@@ -1,4 +1,4 @@
-import OllamaChain from "../lib/ollama-chain";
+import OllamaChain from "ollama-chain";
 
 async function main() {
     const opts = {

@@ -1,5 +1,5 @@
-import { ChatRequestBase } from "lib/types";
-import OllamaChain from "../index";
+import { ChatRequestBase } from "ollama-chain/lib/types";
+import OllamaChain from "ollama-chain";
 
 const main = async () => {
     const ollamachain = OllamaChain();

@@ -1,4 +1,4 @@
-import OllamaChain from "../index";
+import OllamaChain from "ollama-chain";
 
 const main = async () => {
     const ollamachain = OllamaChain();
