@@ -5,6 +5,9 @@ declare const OllamaChain: () => () => {
     systemMessage(message: string, overload?: boolean): /*elided*/ any;
     userMessage(message: string): /*elided*/ any;
     assistantMessage(message: string): /*elided*/ any;
+    setLanguage(language: string): /*elided*/ any;
+    detailedResponse(): /*elided*/ any;
+    shortResponse(): /*elided*/ any;
     trx(): /*elided*/ any;
     commit(): /*elided*/ any;
     rollback(): /*elided*/ any;

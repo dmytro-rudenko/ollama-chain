@@ -2,6 +2,7 @@ import ollama, { ChatRequest, Message } from "ollama";
 import { ChatRequestStream, ChatRequestBase, ResponseFormat } from "./types";
 import { MessageType } from "./enums";
 import Messages from "./messages";
+import prompts from "./prompts";
 
 const OllamaChain = () => () => {
     let log = false;
@@ -55,6 +56,27 @@ const OllamaChain = () => () => {
             ensureMessages();
 
             params.messages!.push(Messages.createAssistantMessage(message));
+            return api;
+        },
+        setLanguage(language: string) {
+            ensureMessages();
+
+            api.systemMessage(prompts.setLanguage(language));
+
+            return api;
+        },
+        detailedResponse() {
+            ensureMessages();
+
+            api.systemMessage(prompts.detailedResponse());
+
+            return api;
+        },
+        shortResponse() {
+            ensureMessages();
+
+            api.systemMessage(prompts.shortResponse());
+
             return api;
         },
         trx() {
@@ -135,9 +157,11 @@ const OllamaChain = () => () => {
                 throw new Error("Model must be specified before calling stream()");
             }
 
+            params.stream = true;
+
             const query = {
                 ...api.toQuery(options),
-                stream: true,
+                stream: params.stream,
             } as ChatRequestStream;
 
             return ollama.chat(query);
