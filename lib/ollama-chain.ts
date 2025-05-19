@@ -98,6 +98,11 @@ const OllamaChain = () => () => {
         getHistory() {
             return params.messages;
         },
+        keepAlive(param: string | number) {
+            params.keep_alive = param;
+
+            return api;
+        },
         toQuery(options: object = {}): ChatRequest {
             const query: ChatRequest = {
                 model: params.model,

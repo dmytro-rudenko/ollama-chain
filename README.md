@@ -45,6 +45,29 @@ const main = async () => {
 
 main();
 ```
+
+### Non-Streaming (Single Response)
+
+```typescript
+const response = await ollamachain()
+    .model("gemma3:4b")
+    .systemMessage("You are a helpful assistant.")
+    .userMessage("Tell me a joke.")
+    .chat({ temperature: 0.7 });
+
+console.log(response.message.content);
+```
+
+### Transaction Example
+
+```typescript
+const chain = ollamachain();
+chain.trx();
+chain.userMessage("First message");
+// ... add more messages
+chain.rollback();
+```
+
 CommonJS
 
 ```javascript
@@ -71,27 +94,6 @@ const main = async () => {
 main();
 ```
 
-### Non-Streaming (Single Response)
-
-```typescript
-const response = await ollamachain()
-    .model("gemma3:4b")
-    .systemMessage("You are a helpful assistant.")
-    .userMessage("Tell me a joke.")
-    .chat({ temperature: 0.7 });
-
-console.log(response.message.content);
-```
-
-### Transaction Example
-
-```typescript
-const chain = ollamachain();
-chain.trx();
-chain.userMessage("First message");
-// ... add more messages
-chain.rollback();
-```
 ## Examples
 
  More examples in [ollama-chain/examples](https://github.com/dmytro-rudenko/ollama-chain/tree/main/examples)
@@ -109,6 +111,7 @@ chain.rollback();
 - `.rollback()` — Roll back to the state before the transaction
 - `.format(format: object)` — Set response format
 - `.logger(isActive: boolean)` — Enable/disable query logging
+- `.keepAlive` -  (Optional) How long to keep the model loaded. A number (seconds) or a string with a duration unit suffix ("300ms", "1.5h", "2h45m", etc.)
 - `.getHistory()` — Get current message history
 - `.toQuery(options?: object)` — Get the raw query object
 - `.chat(options?: object)` — Get a single response (non-streaming)

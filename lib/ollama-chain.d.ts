@@ -11,6 +11,7 @@ declare const OllamaChain: () => () => {
     format(format?: ResponseFormat): /*elided*/ any;
     logger(isActive?: boolean): /*elided*/ any;
     getHistory(): Message[] | undefined;
+    keepAlive(param: string | number): /*elided*/ any;
     toQuery(options?: object): ChatRequest;
     chat(options?: object): Promise<import("ollama").ChatResponse>;
     stream(options?: object): Promise<import("ollama").AbortableAsyncIterator<import("ollama").ChatResponse>>;
