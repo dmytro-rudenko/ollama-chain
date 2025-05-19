@@ -103,7 +103,7 @@ main();
 ## API Reference
 
 - `.model(modelName: string)` — Set the Ollama model to use
-- `.systemMessage(message: string, overload?: boolean)` — Add or update a system message
+- `.systemMessage(message: string, overload?: boolean)` — Add or update a system message. When `overload` is true, replaces the existing system message completely. When false (default), appends the new message to the existing system message with a newline separator.
 - `.userMessage(message: string)` — Add a user message
 - `.assistantMessage(message: string)` — Add an assistant message
 - `.trx()` — Begin a transaction (message history can be rolled back)
