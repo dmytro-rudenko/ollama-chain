@@ -21,8 +21,35 @@ npm install ollama-chain
 
 ### Basic Streaming Example
 
+Typescript
+
 ```typescript
 import OllamaChain from "ollama-chain";
+
+const main = async () => {
+    const ollamachain = OllamaChain();
+
+    const response = await ollamachain()
+        .model("gemma3:4b")
+        .systemMessage("You are a helpful assistant.")
+        .userMessage("What is the capital of France?")
+        .stream({ temperature: 0.7, top_p: 0.9 });
+
+    let responseText = "";
+    for await (const chunk of response) {
+        responseText += chunk.message?.content || "";
+        console.log("responseText:", responseText);
+    }
+    console.log("Response finished.");
+};
+
+main();
+```
+CommonJS
+
+```javascript
+
+const { OllamaChain } = require('ollama-chain')
 
 const main = async () => {
     const ollamachain = OllamaChain();
