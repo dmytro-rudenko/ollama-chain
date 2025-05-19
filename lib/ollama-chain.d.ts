@@ -1,0 +1,19 @@
+import { ChatRequest, Message } from "ollama";
+import { ChatRequestStream, ChatRequestBase, ResponseFormat } from "./types";
+declare const OllamaChain: () => () => {
+    model(model: string): /*elided*/ any;
+    systemMessage(message: string, overload?: boolean): /*elided*/ any;
+    userMessage(message: string): /*elided*/ any;
+    assistantMessage(message: string): /*elided*/ any;
+    trx(): /*elided*/ any;
+    commit(): /*elided*/ any;
+    rollback(): /*elided*/ any;
+    format(format?: ResponseFormat): /*elided*/ any;
+    logger(isActive?: boolean): /*elided*/ any;
+    getHistory(): Message[] | undefined;
+    toQuery(options?: object): ChatRequest;
+    chat(options?: object): Promise<import("ollama").ChatResponse>;
+    stream(options?: object): Promise<import("ollama").AbortableAsyncIterator<import("ollama").ChatResponse>>;
+    execute: (query: ChatRequestStream | ChatRequestBase) => Promise<import("ollama").ChatResponse | import("ollama").AbortableAsyncIterator<import("ollama").ChatResponse>>;
+};
+export default OllamaChain;
