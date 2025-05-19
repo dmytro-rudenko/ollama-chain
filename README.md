@@ -109,7 +109,7 @@ main();
 - `.trx()` — Begin a transaction (message history can be rolled back)
 - `.commit()` — Removing the savepoint and disable transaction
 - `.rollback()` — Roll back to the state before the transaction
-- `.format(format: object)` — Set response format
+- `.format()` — Set response format
 - `.logger(isActive: boolean)` — Enable/disable query logging
 - `.keepAlive` -  (Optional) How long to keep the model loaded. A number (seconds) or a string with a duration unit suffix ("300ms", "1.5h", "2h45m", etc.)
 - `.getHistory()` — Get current message history
