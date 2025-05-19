@@ -67,7 +67,7 @@ chain.rollback();
 ```
 ## Examples
 
- More examples in ollama-chain/examples
+ More examples in [ollama-chain/examples](https://github.com/dmytro-rudenko/ollama-chain/tree/main/examples)
 
  Tested with gemma3:4b
 
