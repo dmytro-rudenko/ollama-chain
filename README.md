@@ -117,6 +117,20 @@ ollamachain()
     .userMessage("What is quantum computing?");
 ```
 
+### Step-by-Step Reasoning
+```typescript
+ollamachain()
+    .stepByStep()  // Enable step-by-step problem solving
+    .userMessage("How do I solve a quadratic equation?");
+```
+
+### Thinking Mode
+```typescript
+ollamachain()
+    .thinking()  // Instruct the model to show its thought process before answering
+    .userMessage("Why is the sky blue?");
+```
+
 ### Logging
 ```typescript
 ollamachain()
@@ -161,6 +175,8 @@ MIT License - see LICENSE file for details.
 - `.setLanguage(language: string)` — Set the response language (e.g., "eng", "ukr")
 - `.detailedResponse()` — Configure the model to provide detailed, comprehensive responses
 - `.shortResponse()` — Configure the model to provide concise, brief responses
+- `.thinking()` — Instructs the model to write its thought process and reasoning before answering the question
+- `.stepByStep()` — Instructs the model to break down the problem and solve it step by step
 - `.format(format?: ResponseFormat)` — Set custom response format parameters
 
 ### Transaction Support
