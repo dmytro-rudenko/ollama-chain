@@ -10,6 +10,12 @@ const prompts = {
     shortResponse: () => {
         return 'Provide a short response to the user\'s query. Do not provide a detailed or lengthy response. Provide only the most important information.';
     },
+    stepByStep: () => {
+        return `Let's think step by step. Break down the problem into smaller parts and solve each part one by one. This will help us understand the problem better and find a solution more easily.`;
+    },
+    thinking: () => {
+        return 'Write your thought process. Do not answer the question directly. Just write your thought process and reasoning. Then answer the question.';
+    }
 };
 exports.default = prompts;
 //# sourceMappingURL=prompts.js.map

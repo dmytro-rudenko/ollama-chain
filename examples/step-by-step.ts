@@ -6,9 +6,9 @@ const main = async () => {
     const query = ollamachain()
         .model("gemma3:4b")
         .logger(true)
-        .shortResponse()
-        .systemMessage("You are a helpful assistant.")
-        .userMessage("Tell me a interesting facts about England.")
+        .stepByStep()
+        .systemMessage("You are a math expert.")
+        .userMessage("Tell me how to solve the equation 2x + 3 = 7.")
 
     const response = await query
         .stream({ temperature: 0.7, top_p: 0.9 });

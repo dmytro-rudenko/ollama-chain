@@ -79,6 +79,20 @@ const OllamaChain = () => () => {
 
             return api;
         },
+        stepByStep() {
+            ensureMessages();
+
+            api.systemMessage(prompts.stepByStep());
+
+            return api;
+        },
+        thinking() {
+            ensureMessages();
+
+            api.systemMessage(prompts.thinking());
+
+            return api;
+        },
         trx() {
             if (transaction) {
                 throw new Error("Transaction already in progress");

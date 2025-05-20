@@ -8,6 +8,8 @@ declare const OllamaChain: () => () => {
     setLanguage(language: string): /*elided*/ any;
     detailedResponse(): /*elided*/ any;
     shortResponse(): /*elided*/ any;
+    stepByStep(): /*elided*/ any;
+    thinking(): /*elided*/ any;
     trx(): /*elided*/ any;
     commit(): /*elided*/ any;
     rollback(): /*elided*/ any;
